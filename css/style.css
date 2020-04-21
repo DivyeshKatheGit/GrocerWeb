@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+html,body
+{
+    scroll-behavior: smooth;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header
+{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header nav
+{
+    height: 10vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    color: #fa983a;
+}
+.nav-brand
+{
+    margin-left: 100px;
+}
+.nav-brand h3 span
+{
+    font-size: 1.5rem;
+}
+nav .burger
+{
+    display: block;
+    cursor: pointer;
+    margin-right: 100px;
+}
+nav .burger .line
+{
+    width: 40px;
+    height: 4px;
+    background-color: #fa983a;
+    margin: 4px 0;
+    transition: .5s;
+}
+.nav-items ul
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+.nav-social ul
+{
+    display: flex;
+    list-style: none;
+}
+.nav-items ul li
+{
+    margin: 15px 13px;
+    font-size: 1.15rem;
+}
+.nav-items ul li a,.nav-social ul li a
+{
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+.nav-social ul li
+{
+    margin: 20px 20px;
+    font-size: 1.2rem;
+}
+nav .nav-list
+{
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 90vh;
+    z-index: 1;
+    background-color: #fa983a;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+nav .nav-active
+{
+    transform: translateX(0%);
+    z-index: 10;
+}
+.nav-list .cross
+{
+    position: absolute;
+    top: 3%;
+    right: 8%;
+    cursor: pointer;
+}
+.nav-list .cross .fas
+{
+    color: white;
+    font-size: 1.8rem;
+}
+header .hero
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/fikri-rasyid-ezeC8-clZSs-unsplash.jpg);
+    filter: blur(1px);
+}
+header .hero-title h1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 900;
+    color: #ffffff;
+}
+main .sec-about,main .sec-services,main .sec-work,main .sec-experties,main .sec-client,main .sec-join
+{
+    padding: 100px 150px;
+}
+main .sec-about>h1,
+main .sec-services>h1,
+main .sec-work>h1,
+main .sec-experties>h1,
+main .sec-client>h1
+{
+    text-align: center;
+    margin-bottom: 50px;
+}
+main .sec h1>span
+{
+    font-size: 2.5rem;
+    color: #fa983a;
+}
+main .sec-about>p
+{
+    margin: 20px 0;
+    opacity: 0;
+}
+main .sec-about .aim
+{
+    margin: 80px 0 0px;
+    display: flex;
+}
+main .sec-about .aim .am
+{
+    margin: 0 30px;
+}
+main .sec-about .aim .am.vision
+{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+main .sec-about .aim .am.mission
+{
+    transform: translateX(100%);
+    opacity: 0;
+}
+main .sec-about .aim h1
+{
+    text-align: center;
+}
+main .sec-about .aim p
+{
+    font-size: .9rem;
+    text-align: center;
+    margin-top: 40px;
+}
+.sec-services .s-cards
+{
+    display: flex;
+}
+.sec-services .s-cards .sc
+{
+    margin: 0 auto;
+    width: 20%;
+    padding: 50px 30px;
+    transition: .4s;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    overflow: hidden;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.sec-services .s-cards .sc .icon
+{
+    width: 50px;
+    height: 50px;
+    margin: 0px auto 20px;
+    background-color: #fa983a;
+    box-shadow: 0 0 0px #fa983a;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-weight: 900;
+    transition: .8s;
+    color: #ffffff;
+}
+.sec-services .s-cards .sc:hover .icon
+{
+    box-shadow: 0 0 0 400px #fa983a;
+}
+.sec-services .s-cards .sc p
+{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #444444;
+}
+.sec-services .s-cards .sc:hover p
+{
+    color: #ffffff;
+}
+.sec-work
+{
+    background-color: #eeeeee;
+}
+.sec-flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.sec-work .sec-left
+{
+    width: 50%;
+    padding-right: 50px;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.sec-work .sec-left p
+{
+    margin: 20px 0;
+}
+.sec-work .sec-right
+{
+    width: 50%;
+    height: 500px;
+    background-image: url(../assets/undraw_operating_system_4lr6.svg);
+    background-size: cover;
+    transform: translateX(100%);
+    opacity: 0;
+}
+main .sec-experties .e-l
+{
+    display: flex;
+}
+main .sec-experties .e-l .ec
+{
+    position: relative;
+    width: 45%;
+    margin: 20px auto;
+    padding: 0px 50px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    opacity: 0;
+}
+main .sec-experties .e-l .ec .e-icon
+{
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #fa983a;
+}
+main .sec-experties .e-l .ec .tagline
+{
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+main .sec-experties .e-l .ec .inner
+{
+    position: absolute;
+    background-color: #ffad5f;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: .8s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+main .sec-experties .e-l .ec:hover .inner
+{
+    transform: translateY(0);
+}
+main .sec-client
+{
+    background-color: #eeeeee;
+}
+main .sec-client .c-l
+{
+    display: flex;
+}
+main .sec-client .c-l-1
+{
+    transform: translateX(-100%);
+}
+main .sec-client .c-l-2
+{
+    transform: translateX(100%);
+}
+main .sec-client .c-l .cc
+{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    background-image: url(../assets/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    background-position: center;
+    overflow: hidden;
+}
+main .sec-client .c-l .cc .brand
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(50%);
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0,0,0,.7);
+    padding-top: 50px;
+    transition: .6s;
+}
+main .sec-client .c-l .cc:hover .brand
+{
+    transform: translateY(100%);
+}
+main .sec-join
+{
+    background-color: #ffad5f;
+}
+main .sec-join h1
+{
+    color: #ffffff;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+main .sec-join h1>span
+{
+    color: #ffffff;
+}
+main .sec-join p
+{
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+main .sec-join a
+{
+    display: inline-block;
+    margin-top: 50px;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-weight: 700;
+}
+main .sec-join a:hover
+{
+    background-color: #ffffff;
+    color: #ffad5f;
+}
